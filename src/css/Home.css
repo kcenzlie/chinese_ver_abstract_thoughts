@@ -1,0 +1,85 @@
+/* Home.css */
+
+/* General styles for the home page */
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eea7a7;
+    color: #333;
+} */
+
+/* Header styles */
+/* header {
+    background-color: #adc3ae;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+} */
+
+/* Main content styles */
+/* main {
+    padding: 2rem;
+    max-width: 1200px; */
+    /* margin: 0rem auto 0; */
+    /* background-color: #e67676; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+/* } */
+
+/* Section styles */
+/* section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #af7e7e;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+/* Footer styles */
+/* footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+} */
+
+/* Button styles */
+/* button {
+    background-color: #c9b4f6;
+    color: rgb(92, 76, 209);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #dfcdf4;
+} */
+
+/* Responsive design */
+/* @media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    header {
+        font-size: 1.2rem;
+    }
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+} */

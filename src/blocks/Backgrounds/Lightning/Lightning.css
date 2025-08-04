@@ -1,0 +1,9 @@
+/*
+	Installed from https://reactbits.dev/default/
+*/
+
+.lightning-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
