@@ -2,7 +2,7 @@
   "name": "abstract_thoughts",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://kcenzlie.github.io/abstract_thoughts/",
+  "homepage": "https://kcenzlie.github.io/chinese_ver_abstract_thoughts/",
   "type": "module",
   "scripts": {
     "clean-build": "rm -rf dist node_modules/.vite",
@@ -90,12 +90,12 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kcenzlie/abstract_thoughts.git"
+    "url": "git+https://github.com/kcenzlie/chinese_ver_abstract_thoughts.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kcenzlie/abstract_thoughts/issues"
+    "url": "https://github.com/kcenzlie/chinese_ver_abstract_thoughts/issues"
   }
 }

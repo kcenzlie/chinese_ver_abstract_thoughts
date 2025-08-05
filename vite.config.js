@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/abstract_thoughts/',
+  base: '/chinese_ver_abstract_thoughts/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
