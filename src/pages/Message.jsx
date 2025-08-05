@@ -125,13 +125,13 @@ const Message = () => {
         };
     }, []);
 
-    if (loading) return <div className="text-center text-gray-500 mt-10">Loading...</div>;
+    if (loading) return <div className="text-center text-gray-500 mt-10">加载中...</div>;
 
     return (
         <div className="p-6 w-3/4 mx-auto">
-            <h2 className="text-xl font-bold mb-4 text-gray-200">Archived ideas and comments</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-200">已存档的想法和评论</h2>
             {posts.length === 0 ? (
-                <p className="text-pink-600">You have not created any posts yet. When you're ready, go ahead!</p>
+                <p className="text-pink-600">你还没有发布任何想法。不急，先看看也可以！</p>
             ) : (
                 <div className="max-h-[500px] overflow-y-auto bg-trasnparent">
                     <ul className="p-3 space-y-2">
@@ -144,13 +144,13 @@ const Message = () => {
                                     </small>
                                     <ul className="mt-3 space-y-3">
                                         {!post.Comments?.length ? (
-                                            <li className="text-gray-300 text-sm">No comments yet</li>
+                                            <li className="text-gray-300 text-sm">还没有评论，过两天再来看看吧！</li>
                                         ) : (
                                             post.Comments.map((comment) => (
                                                 <li key={comment.id} className="p-3">
                                                     <p className="text-pink-400">{comment.comments}</p>
                                                     <small className="text-gray-300 font-thin block mt-1">
-                                                        Commented at: {new Date(comment.created_at).toLocaleString()}
+                                                        评论于 {new Date(comment.created_at).toLocaleString()}
                                                     </small>
                                                 </li>
                                             ))

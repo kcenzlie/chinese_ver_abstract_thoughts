@@ -26,14 +26,14 @@ const Login = () => {
   
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <h2 className="text-3xl font-bold mb-3 text-pink-500">Login</h2>
+        <h2 className="text-3xl font-bold mb-3 text-pink-500">登录</h2>
         {message && <div className="text-red-500 mb-4">{message}</div>}
         <form onSubmit={handleSubmit} className="space-y-4 space-x-1">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
+            placeholder="邮箱"
             required
             className="rounded px-4 py-2 w-64"
           />
@@ -41,16 +41,16 @@ const Login = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
+            placeholder="密码"
             required
             className="rounded px-4 py-2 w-64"
           />
           <button type="submit" className="bg-pink-400 text-white px-4 py-2 rounded hover:bg-pink-200">
-            Login
+            登录
           </button>
         </form>
         <p className="mt-4 text-gray-200">
-          Don't have an account? <Link to="/register" className="text-pink-500 hover:underline">Register :)))</Link>
+          还没有账号？ <Link to="/register" className="text-pink-500 hover:underline">注册 :)))</Link>
         </p>
       </div>
     );

@@ -26,23 +26,24 @@ function Home() {
                         style={{ background: 'black' }}
                     />
                     <header className="text-pink-400 p-2 text-center font-bold text-3xl md:text-4xl lg:text-5xl drop-shadow-lg">
-                        Curious soul captured? Good. 
+                        嘿嘿，又一只好奇的人类！
                     </header>
                     <header className="text-pink-200 p-10 text-center text-2xl md:text-3xl font-bold drop-shadow-lg">
-                        Dive into the uncharted depths of you.
+                        快来潜入你内心的抽象深处。
                     </header>
                     <main className="p-2 max-w-3xl mx-auto text-center">
                         {user ? (
                             <section className="mb-7 font-bold flex flex-col">
-                                <Link to="/about" className="font-bold text-2xl text-white underline hover:text-blue-400 mb-10">Where on earth am I?</Link>
-                                <Link to="/write" className="font-bold text-2xl text-white underline hover:text-blue-400 mb-10">I've got an idea.</Link>
-                                <Link to="/dashboard" className="font-bold text-2xl text-white underline hover:text-blue-400">I'm curious about other ideas.</Link>
+                                <Link to="/about" className="font-bold text-2xl text-white underline hover:text-blue-400 mb-10">什么鬼，我到底在哪里？</Link>
+                                <Link to="/write" className="font-bold text-2xl text-white underline hover:text-blue-400 mb-10">我有一个抽象的想法</Link>
+                                <Link to="/dashboard" className="font-bold text-2xl text-white underline hover:text-blue-400 mb-10">我好好奇其他人发了什么</Link>
+                                <Link to="/message" className="font-bold text-2xl text-white underline hover:text-blue-400">让我看看我之前发的想法有没有新的评论！</Link>
                             </section>
                         ) : (
                             <section className="mb-7 font-bold flex">
-                                <Link to="/register" className="text-blue-500 text-2xl hover:underline mr-4">Register</Link>
+                                <Link to="/register" className="text-blue-500 text-2xl hover:underline mr-4">注册</Link>
                                 <div className="text-white text-2xl">|</div>
-                                <Link to="/login" className="ml-4 text-blue-500 text-2xl hover:underline">Login</Link>
+                                <Link to="/login" className="ml-4 text-blue-500 text-2xl hover:underline">登录</Link>
                             </section>
                         )}
                     </main>

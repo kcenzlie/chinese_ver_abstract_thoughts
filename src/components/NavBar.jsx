@@ -143,20 +143,20 @@ const NavBar = () => {
     return (
         <nav className="p-1 pb-4 pt-4 flex justify-between items-center ">
             <Link to="/" className="text-2xl font-extrabold text-blue-700 hover:text-purple-300">
-                Abstract Thoughts
+                Abstract Thoughts 抽象的人
             </Link>
             <div className="flex gap-6">
                 <Link to="/about" className="text-xl text-blue-700 font-extrabold hover:text-pink-500 hover:underline">
-                    About
+                    关于
                 </Link>
                 <Link to="/write" className="text-xl text-blue-700 font-extrabold hover:text-pink-500 hover:underline">
-                    Write
+                    发布
                 </Link>
                 <Link to="/dashboard" className="text-xl text-blue-700 font-extrabold hover:text-pink-500 hover:underline">
-                    Comment
+                    评论
                 </Link>
                 <Link to="/message" className="text-xl text-blue-700 font-extrabold hover:text-pink-500 hover:underline"  onClick={handleMessageClick}>
-                    Messages {hasNewComments && <span className="text-red-500">💗</span>}
+                    灵感库 {hasNewComments && <span className="text-red-500">💗</span>}
                 </Link>
             </div>
         </nav>

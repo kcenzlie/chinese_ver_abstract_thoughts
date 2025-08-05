@@ -4,19 +4,19 @@ import { useNavigate } from 'react-router-dom';
 import Comments from '../components/Comments';
 
 const comments = [
-    "build from this idea?",
-    "make this idea even more abstract?",
-    "turn this idea into a reality?",
-    "help to see this idea from a different perspective?",
-    "expand on this idea?",
-    "add a twist to this idea?",
-    "make this idea more concrete?",
-    "explore the depths of this idea?",
-    "connect this idea with other ideas?",
-    "challenge this idea further?",
-    "take this idea to the next level?",
-    "find the hidden meaning in this idea?",
-    "create something beautiful from this idea?",
+    "顺着这个想法延伸下去吗？",
+    "让这个想法再抽象一点吗？",
+    "帮助这个想法变成现实吗？",
+    "换个角度帮忙思考这个想法吗？",
+    "延伸讨论一下这个想法吗？",
+    "给这个想法加个新转折吗？",
+    "把这个想法说得更具体点吗？",
+    "深入探索一下这个想法的本质吗？",
+    "把这个想法和其他的疯狂点子串联起来吗？",
+    "进一步挑战这个想法吗？",
+    "把这个想法玩出新高度吗？",
+    "挖掘出这个想法中的深意吗？",
+    "想象如何利用这个想法创造出美好的东西吗？",
 ];
 
 function getComments() {
@@ -66,7 +66,7 @@ const Dashboard = () => {
             }
 
             if (posts.length === 0) {
-                setErrorMessage('No posts available.');
+                setErrorMessage('暂时还没有想法。');
                 return;
             }
 
@@ -108,28 +108,28 @@ const Dashboard = () => {
 
     return (
         <div className="w-2/3 mx-auto p-6 rounded-lg shadow-md">
-            <h1 className="text-3xl font-bold text-gray-300">Can you...</h1>
+            <h1 className="text-3xl font-bold text-gray-300">你能...</h1>
             <div className="text-2xl font-bold text-gray-300 mb-6">{comment}</div>
-            <div className="text-gray-200 mt-2 text-sm"> A few notes:</div>
+            <div className="text-gray-200 mt-2 text-sm">一些提示：</div>
                 <ul className="list-disc list-inside mt-2 space-y-1 text-gray-200 text-sm mb-6">
                     <li>
-                        This is a space for the unique you to contribute to the ideas!
+                        这是专属于你的独特舞台，快用你<span className="font-semibold text-blue-400">独一份的脑洞</span>来为这些想法添砖加瓦吧！
                     </li>
                     <li>
-                        Remember to be positive, constructive, and respectful.
+                        记得带上你的<span className="font-semibold text-blue-400">快乐、善意和幽默感</span>，这里是个充满正能量的地方哦~
                     </li>
                     <li>
-                        Helping others to see the beauty in their ideas is a wonderful way to connect.
+                        帮别人<span className="font-semibold text-blue-400">点亮</span>他们想法里的灵感小火花，是让你们<span className="font-semibold text-blue-400">有趣的灵魂连接</span>的绝妙方式！
                     </li>
                     <li>
-                        Some content may be moderated to ensure a safe and welcoming environment for all.
+                        偶尔会有巡逻小精灵路过，它会帮忙清理一些不合适的内容，请不要介意。
                     </li>
                 </ul>
             <button 
                 onClick={signOut} 
                 className="text-xs font-bold text-gray-500 hover:text-blue-700 underline mb-4"
             >
-                Sign out
+                登出
             </button>
 
             {errorMessage && <p className="text-red-500 mt-4">{errorMessage}</p>}
@@ -137,7 +137,7 @@ const Dashboard = () => {
                 <div className="mt-3 p-4">
                     <p className="text-gray-200 text-2xl font-bold mb-6">{randomPost.post}</p>
                     <small className="text-white font-thin block mt-2 ">
-                        Posted on: {new Date(randomPost.created_at).toLocaleString()}
+                        发布于 {new Date(randomPost.created_at).toLocaleString()}
                     </small>
                     <div className="p-4 text-white mt-4 rounded-lg shadow-sm">
                         <Comments
@@ -148,7 +148,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             ) : (
-                <p className="mt-6 text-pink-400 text-thin text-center">Loading an idea...</p>
+                <p className="mt-6 text-pink-400 text-thin text-center">加载想法中...</p>
             )}
         </div>
     );

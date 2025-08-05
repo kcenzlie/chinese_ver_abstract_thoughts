@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import supabase from '../helper/supabaseClient';
 
 const questions = [
-    "that you desperately want to share with others?",
-    "that you can't find the right people to share it with?",
-    "that is too crazy, too abstract, or too personal to share?",
-    "that nobody around you seems to understand?",
-    "that you've been waiting for the right moment to let it out?",
-    "that keeps you up at night?",
-    "that contains your deepest thoughts, wildest dreams, or darkest fears?",
-    "that you think is the most fascinating to you?",
+    "让你憋到抓狂，不吐不快？",
+    "但是找不到懂你的嘴替？",
+    "是疯到离谱/抽象到裂开/私密到社死的？",
+    "让周围人听了都瞳孔地震？",
+    "在等一个能封神的高光时刻？",
+    "让你深夜上头，修仙到天亮？",
+    "它藏着你的颅内高潮/狂野脑洞/深夜破防？",
+    "让你觉得能颅内放烟花？",
 ];
 
 function getQuestions() {
@@ -35,8 +35,8 @@ const Write = () => {
         return (
             <div className="flex items-center justify-center h-screen text-center">
                 <p className="text-gray-700">
-                    You must be logged in to write a post. Please{' '}
-                    <Link to="/login" className="text-blue-500 hover:underline">log in</Link>.
+                    你必须登录才能发表抽象想法。请{' '}
+                    <Link to="/login" className="text-blue-500 hover:underline">登录:D</Link>.
                 </p>
             </div>
         );
@@ -77,28 +77,28 @@ const Write = () => {
     return (
         <div className="flex items-center justify-center flex flex-col">
             <div className="mb-8 text-base leading-relaxed">
-                <span className="font-semibold text-gray-300 font-bold text-3xl">What is an idea... </span>
+                <span className="font-semibold text-gray-300 font-bold text-3xl">你有没有什么抽象的想法...</span>
                 <div className="font-semibold text-gray-300 font-bold text-2xl mb-10">{question}</div>
-                <div className="text-gray-200 mt-2 text-sm"> A few notes:</div>
+                <div className="text-gray-200 mt-2 text-sm">一些提示：</div>
                 <ul className="list-disc list-inside mt-2 space-y-1 text-gray-200 text-sm">
                     <li>
-                        This is a space for you to share your thoughts, ideas, and inspirations with the world.
+                        欢迎你来到属于你的脑洞现场，此刻，麦是你的！
                     </li>
                     <li>
-                        Once your idea gathers <span className="font-semibold text-blue-400"> echos</span> from other souls, it wiill be automatically archived in the messages page, where you can revisit them anytime.
+                        当你的点子收割<span className="font-semibold text-blue-400">评论+1</span>时，它会自动<span className="font-semibold text-blue-400">存档到灵感库</span>，随时翻牌重温！
                     </li>
                     <li>
-                        Keep in mind that this is <span className="font-semibold text-blue-400">a public space</span>, so be mindful of what you share.
+                        注意！这里是<span className="font-semibold text-blue-400">公共空间</span>，注意你所有的言论和行为哦~
                     </li>
                     <li>
-                        Let's keep it <span className="font-semibold text-blue-400"> positive</span> and <span className="font-semibold text-blue-400"> constructive</span>. This is a place for sharing, not for negativity.
+                        一起守护这个<span className="font-semibold text-blue-400">脑洞发电站</span>和<span className="font-semibold text-blue-400">灵感能量池</span>！拒绝负面言论，只种快乐的脑洞！
                     </li>
                     <li>
-                        Some content may be moderated to ensure a safe and welcoming environment for all.
+                        偶尔会有巡逻小精灵路过，它会帮忙清理一些不合适的内容，请不要介意。
                     </li>
                 </ul>
                 <div className="mt-3 font-bold text-pink-300 text-lg">
-                    Let's build a community of abstract thinkers and dreamers!
+                    这里是一个让你畅所欲言的地方，尽情释放你的想法吧！
                 </div>
             </div>
             <div className="w-full">
@@ -108,7 +108,7 @@ const Write = () => {
                     <textarea
                         value={post}
                         onChange={handleInputChange}
-                        placeholder="Enter your crazy thoughts..."
+                        placeholder="开始写你的抽象想法吧..."
                         className="bg-white border border-black-300 rounded-lg w-full p-10 focus:outline-none focus:ring-2 focus:ring-pink-300 resize-none overflow-hidden text-blue-700"
                         rows="1"
                     />
@@ -116,7 +116,7 @@ const Write = () => {
                         type="submit"
                         className="w-full bg-pink-400 text-white py-2 rounded-lg transition-all font-bold shadow-md hover:bg-yellow-300"
                     >
-                        I wanna know how others think about this!
+                        我想知道别人怎么想！
                     </button>
                 </form>
             </div>

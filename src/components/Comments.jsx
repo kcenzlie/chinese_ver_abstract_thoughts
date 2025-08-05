@@ -77,7 +77,7 @@ const Comments = ({ postId, initialComments = [], refreshPost }) => {
                     ref={textareaRef}
                     value={comment}
                     onChange={handleInput}
-                    placeholder="Write your comment here..."
+                    placeholder="在这里留下你的评论吧..."
                     className="flex-1 p-4 bg-gray-200 rounded mb-2 focus:outline-none focus:ring-2 focus:ring-pink-300 resize-none overflow-shown text-blue-700"
                     rows={1}
                     style={{ minHeight: '90px', maxHeight: '300px', overflowY: 'auto' }}
@@ -87,14 +87,14 @@ const Comments = ({ postId, initialComments = [], refreshPost }) => {
                     className="p-4 rounded text-white bg-pink-400 h-fit hover:font-bold hover:bg-yellow-300"
                     style={{ minHeight: '90px', minWidth: '60px' }}
                 >
-                    Submit
+                    提交
                 </button>
             </form>
             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
             <div>
-                <div className="font-bold text-gray-200">Comments:</div>
+                <div className="font-bold text-gray-200">评论：</div>
                 {isLoading ? (
-                    <p>Loading comments...</p>
+                    <p>加载评论中...</p>
                 ) : (
                     comments.map((c) => (
                         <div key={c.id}>
