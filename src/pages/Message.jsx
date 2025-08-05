@@ -8,12 +8,12 @@ const Message = () => {
     const fetchPostsAndComments = async (userId) => {
         try {
             const { data: postsData, error: postsError } = await supabase
-                .from('Post')
+                .from('Post_chinese_version')
                 .select(`
                     id,
                     post,
                     created_at,
-                    Comments (
+                    Comments_chinese_version (
                         id,
                         comments,
                         created_at
@@ -30,7 +30,7 @@ const Message = () => {
             // Sort posts by their latest comment or post creation time
             return postsData.map(post => ({
                 ...post,
-                Comments: post.Comments?.sort((a, b) => 
+                Comments: post.Comments_chinese_version?.sort((a, b) => 
                     new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
                 ) || []
             })).sort((a, b) => {
@@ -89,7 +89,7 @@ const Message = () => {
             setLoading(false);
 
             const { data: userPosts } = await supabase
-                .from('Post')
+                .from('Post_chinese_version')
                 .select('id')
                 .eq('user_id', session.user.id);
 
@@ -103,7 +103,7 @@ const Message = () => {
                         { 
                             event: 'INSERT', 
                             schema: 'public', 
-                            table: 'Comments',
+                            table: 'Comments_chinese_version',
                             filter: `post_id=in.(${userPostIds.join(',')})`
                         },
                         async (payload) => {
@@ -140,7 +140,7 @@ const Message = () => {
                                 <div>
                                     <h3 className="text-lg text-blue-500">{post.post}</h3>
                                     <small className="text-gray-200 font-thin block mt-1">
-                                        Created at: {new Date(post.created_at).toLocaleString()}
+                                        发布于：{new Date(post.created_at).toLocaleString()}
                                     </small>
                                     <ul className="mt-3 space-y-3">
                                         {!post.Comments?.length ? (
@@ -150,7 +150,7 @@ const Message = () => {
                                                 <li key={comment.id} className="p-3">
                                                     <p className="text-pink-400">{comment.comments}</p>
                                                     <small className="text-gray-300 font-thin block mt-1">
-                                                        评论于 {new Date(comment.created_at).toLocaleString()}
+                                                        发布于：{new Date(comment.created_at).toLocaleString()}
                                                     </small>
                                                 </li>
                                             ))

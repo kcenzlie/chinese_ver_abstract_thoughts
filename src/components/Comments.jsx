@@ -11,7 +11,7 @@ const Comments = ({ postId, initialComments = [], refreshPost }) => {
     const fetchComments = async () => {
         setIsLoading(true);
         const { data, error } = await supabase
-            .from('Comments')
+            .from('Comments_chinese_version')
             .select('*')
             .eq('post_id', postId)
             .order('created_at', { ascending: true });
@@ -36,7 +36,7 @@ const Comments = ({ postId, initialComments = [], refreshPost }) => {
             return;
         }
 
-        const { error: insertError } = await supabase.from('Comments').insert([
+        const { error: insertError } = await supabase.from('Comments_chinese_version').insert([
             {
                 post_id: postId,
                 comments: comment,

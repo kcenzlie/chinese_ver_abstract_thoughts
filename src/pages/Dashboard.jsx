@@ -54,7 +54,7 @@ const Dashboard = () => {
         try {
             // First fetch a random post excluding the user's own posts
             const { data: posts, error: postsError } = await supabase
-                .from('Post')
+                .from('Post_chinese_version')
                 .select('id, post, created_at, user_id')
                 .neq('user_id', userId) // Exclude posts by the current user
                 .order('created_at', { ascending: false });
@@ -76,7 +76,7 @@ const Dashboard = () => {
 
             // Then fetch comments for this specific post
             const { data: comments, error: commentsError } = await supabase
-                .from('Comments')
+                .from('Comments_chinese_version')
                 .select('id, comments, created_at')
                 .eq('post_id', selectedPost.id)
                 .order('created_at', { ascending: true });

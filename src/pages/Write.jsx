@@ -53,7 +53,7 @@ const Write = () => {
         console.log('Authenticated User ID:', user.id); // Debugging log
 
         try {
-            const { error: insertError } = await supabase.from('Post').insert([
+            const { error: insertError } = await supabase.from('Post_chinese_version').insert([
                 {
                     user_id: user.id,
                     post: post,
